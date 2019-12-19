@@ -1,0 +1,347 @@
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/media-query';
+.top-bar-right{
+  text-align: left;
+}
+.top-bar-right a i, .top-bar-right span i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.navbar-default .navbar-nav{
+  &.navbar-right{
+    @include tablet{
+      margin-right: 0;
+      margin-left: 40px;
+      float:left !important;
+    }
+  }
+}
+.cart_btn{
+  display:inline-block;
+  float:left;
+  position:absolute;
+  top: 16px;
+  right: auto;
+  left: 70px;
+  @include tablet{
+    top: 35px;
+    left: 15px;
+  }
+}
+.navbar.bb-fixed-header .cart_btn{
+  right: auto;
+}
+.navbar-nav li.dropdown.singleDrop .dropdown-menu li.open .dropdown-menu {
+  @include tablet {
+    border-left: none;
+    border-right: 10px solid transparent;
+  }
+}
+.navbar .navbar-nav li.open .dropdown-menu,
+.navbar .navbar-nav li.dropdown .dropdown-menu{
+  @include tablet {
+    min-width: 160px;
+    padding: 15px 15px 20px 0;
+  }
+}
+.navbar-nav li.open .dropdown-menu ul.dropdown-menu,
+.navbar-nav li.dropdown .dropdown-menu ul.dropdown-menu {
+  @include tablet {
+    border: none;
+    top: 0 !important;
+    left: auto !important;
+    right: 100%;
+    margin-left: 0;
+    margin-right: -5px;
+    border-left: none;
+    border-right: 10px solid transparent;
+  }
+}
+.navbar-collapse ul.navbar-nav > li.dropdown > a:after{
+  right: auto;
+  left: 15px;
+}
+.navbar-collapse ul.navbar-nav li.dropdown li.dropdown > a:after{
+  right: auto;
+  left: 0;
+  @include tablet {
+    content: "\f104";
+    right: auto;
+    left: 15px;
+  }
+}
+.navbar-collapse ul.navbar-nav li.dropdown.open li.dropdown > a:after{
+  @include tablet {
+    content: "\f104";
+  }
+}
+.rtl .main-slider{
+  direction: ltr;
+  text-align: right;
+}
+.main-slider .common-inner a {
+    display: inline-block;
+}
+.aboutInner{
+  @include tablet{
+    float: left;
+  }
+}
+.sepcialContainer{
+  @include tablet{
+    position: absolute;
+    left: auto;
+    right: 0;
+    -moz-transform: translate(50%, 0);
+    -o-transform: translate(50%, 0);
+    -ms-transform: translate(50%, 0);
+    -webkit-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+  }
+}
+.rightPadding{
+  @include tablet{
+    padding: 0 15px 0 0;
+  }
+}
+.imagebox{
+  @include tablet{
+    border: 5px solid $white-color;
+    border-left: 0;
+  }
+  img{
+    position: relative;
+    z-index: 1;
+    margin: -10px 10px 10px 0;
+    @include tablet{
+      margin: -40px 40px 40px 0;
+    }
+    @include desktops{
+      margin: -60px 60px 60px 0;
+    }
+  }
+}
+.aboutInfo{
+  @include tablet{
+    padding: 0 55px 0 0;
+    margin: 0;
+  }
+  @include desktops{
+    padding: 0 95px 0 0;
+  }
+}
+.reviewImage{
+  @include tablet{
+    left: auto;
+    right: -125px;
+  }
+  @include desktops{
+    left: auto;
+    right: -145px;
+  }
+  img{
+    right: 25px;
+    left: auto;
+  }
+}
+.reviewInfo{
+  padding: 60px 65px 53px 30px;
+}
+.rtl .brandArea{
+  direction: ltr;
+  text-align: right;
+}
+.footerText .form-control, .footerText .input-group-addon,
+.input-group .form-control:first-child {
+    border: 1px solid rgba($black-color,0.1);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.copyRight{
+  .list-inline{
+    @include tablet{
+      text-align: left;
+    }
+  }
+}
+.copyRightText p{
+  @include tablet{
+    text-align: right;
+  }
+}
+.blogSidebar .media .media-left {
+  float: right;
+  padding-right: 0;
+  padding-left: 20px;
+  @include tablet {
+    padding-left: 15px;
+  }
+  @include desktops {
+    padding-left: 20px;
+  }
+}
+.media .list-inline li i {
+  margin-right: 0;
+  margin-left: 8px;
+}
+.blogCommnets .media > .media-left {
+  float: right;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.blogCommnets .media-body h5 i.fa {
+  margin-right: 0;
+  margin-left: 7px;
+}
+.productSideBar .panel-heading {
+  padding: 0 15px 0 0;
+}
+.productSideBar .productSide li a i.fa {
+  float: left;
+  margin-right: 0;
+  margin-left: 5px;
+}
+.price-slider-inner .amount-wrapper {
+  left: auto;
+  right: 12px;
+}
+.tabCommon.singleTab .tab-pane .list-inline li i.fa {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.finalCart input {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.singleProductInfo h3 del {
+  margin-right: 15px;
+  margin-left: 0;
+}
+.dashboard.list-inline{
+	li{
+    @include tablet{
+			padding: 0 0 0 10px;
+		}
+		@include desktops{
+			padding: 0 0 0 20px;
+		}
+	}
+}
+.innerWrapper .table-responsive .table thead tr th:first-child {
+  border-right: none;
+}
+.innerWrapper .table-responsive .table tbody tr td {
+  padding-left: 8px;
+  padding-right: 20px;
+}
+.form-control {
+  padding: 6px 12px;
+}
+.cartInfo .form-control, .cartInfo .input-group-addon {
+  margin: 0 0 0 5%;
+}
+.cartInfo .input-group-addon {
+  margin: 0;
+}
+.form-group .helpText {
+  right: auto;
+  left: 25px;
+}
+.countrySelect .sbToggle {
+  right: auto;
+  left: 10px;
+}
+.totalAmount{
+  @include tablet{
+    float: left;
+  }
+}
+.confirmation .alert{
+  .fa-check{
+    margin-right: 0;
+    margin-left: 10px;
+    @include tablet{
+      margin-right: 0;
+      margin-left: 24px;
+    }
+  }
+}
+.confirm-detail{
+  .cart-total{
+    @include tablet{
+      float: left;
+    }
+  }
+}
+.holdingInfo{
+  ul{
+    li{
+      padding: 0 25px 0 0;
+      @include desktops{
+        padding: 0 38px 0 0;
+      }
+      i{
+        left: auto;
+        top: 5px;
+        right: 0;
+      }
+    }
+  }
+}
+.profilePersonal .list-unstyled li {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.progressSingle .list-inline li.pull-right {
+    float: left !important;
+}
+.formPart i.fa {
+    left: 0;
+    right: 0;
+}
+.formPart .form-control {
+  padding-left: 12px;
+  padding-right: 38px;
+}
+.comingSoon{
+  text-align: right;
+}
+.count-down{
+  #simple_timer{
+    .table-cell{
+      margin: 0 0 0 3px;
+      @include mobile {
+        margin: 0 0 0 22px;
+      }
+      @include tablet {
+        margin: 0 0 0 18px;
+      }
+      @include desktops {
+        margin: 0 0 0 17px;
+      }
+      @include large-desktops {
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+}
+.comingInner .form-control, .input-group-addon{
+  margin: 0 0 0 5%;
+}
+.navbar-collapse.content-collapse ul.navbar-nav li a i {
+  right: auto;
+  left: 25px;
+}
+.media{
+  .media-left{
+    @include tablet {
+      padding-right:10px;
+      padding-left:15px;
+    }
+    @include desktops {
+      padding-left:25px;
+    }
+  }
+}
